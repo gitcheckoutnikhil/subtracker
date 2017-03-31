@@ -1,0 +1,50 @@
+AllTrainsIntent how are the trains today
+AllTrainsIntent how're the trains today
+AllTrainsIntent how are the trains
+AllTrainsIntent how're the trains
+AllTrainsIntent are the trains running
+AllTrainsIntent are the trains running on time
+AllTrainsIntent are the trains on time
+AllTrainsIntent what's the subway status
+AllTrainsIntent what is the subway status
+AllTrainsIntent about train delays
+AllTrainsIntent about subway delays
+AllTrainsIntent about any subway delays
+AllTrainsIntent about track work
+AllTrainsIntent about any track work
+AllTrainsIntent about planned track work
+AllTrainsIntent about planned subway track work
+AllTrainsIntent what trains are delayed
+AllTrainsIntent about any planned track work
+AllTrainsIntent about any planned subway track work
+AllTrainsIntent if the trains are delayed
+AllTrainsIntent if the subway is running
+AllTrainsIntent if the subway is on time
+LineStatusIntent how the {Line} train is doing
+LineStatusIntent how the {Line} train is running
+LineStatusIntent if the {Line} train is running
+LineStatusIntent about the {Line} train
+LineStatusIntent to tell me about the {Line} train
+LineStatusIntent if the {Line} train is delayed
+LineStatusIntent if there is any track work on the {Line} train
+LineStatusIntent if there are problems on the {Line} train
+LineStatusIntent about any {Line} train delays
+LineStatusIntent about any {Line} train problems
+LineStatusIntent about any problems on the {Line} train
+LineStatusIntent about any problems on the {Line} train
+LineStatusIntent how the {Line} is doing
+LineStatusIntent how the {Line} is running
+LineStatusIntent if the {Line} is running
+LineStatusIntent about the {Line} 
+LineStatusIntent to tell me about the {Line} 
+LineStatusIntent if the {Line} is delayed
+LineStatusIntent if there is any track work on the {Line} 
+LineStatusIntent if there are problems on the {Line} 
+LineStatusIntent about any {Line} delays
+LineStatusIntent about any {Line} problems
+LineStatusIntent about any problems on the {Line} 
+LineStatusIntent about any problems on the {Line} 
+CommuteStatusIntent how {Commuter} commute looks
+CommuteStatusIntent about how {Commuter} commute looks
+CommuteStatusIntent about {Commuter} commute
+CommuteStatusIntent about {Commuter} route to work
