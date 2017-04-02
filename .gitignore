@@ -1,0 +1,8 @@
+beautifulsoup4-4.5.3.dist-info/
+bs4/
+requests-2.13.0.dist-info/
+requests/
+upload.zip
+xmltodict-0.10.2.dist-info/
+xmltodict.py
+*.pyc
