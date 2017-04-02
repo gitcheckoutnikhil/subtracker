@@ -20,6 +20,44 @@ AllTrainsIntent about any planned subway track work
 AllTrainsIntent if the trains are delayed
 AllTrainsIntent if the subway is running
 AllTrainsIntent if the subway is on time
+AllTrainsIntent about the status of all trains
+AllTrainsIntent about the status of all lines
+AllTrainsIntent about the status of all subway lines
+AllTrainsIntent about the status of all subway trains
+AllTrainsIntent about all train statuses
+AllTrainsIntent about all trains
+AllTrainsIntent about all delays
+AllTrainsIntent about all subway delays
+AllTrainsIntent for the status of all lines
+AllTrainsIntent for the status of all trains
+AllTrainsIntent for the status of the whole subway
+AllTrainsIntent are the trains delayed
+AllTrainsIntent is the subway running
+AllTrainsIntent is the subway on time
+LineStatusIntent are there any delays on the {Line}
+LineStatusIntent are there any delays on the {Line} train
+LineStatusIntent are there any delays on the {Line} line
+LineStatusIntent are there delays on the {Line}
+LineStatusIntent are there delays on the {Line} train
+LineStatusIntent are there delays on the {Line} line
+LineStatusIntent is the {Line} delayed
+LineStatusIntent is the {Line} train delayed
+LineStatusIntent is the {Line} Line delayed
+LineStatusIntent is the {Line} running
+LineStatusIntent is the {Line} train running
+LineStatusIntent is the {Line} Line running
+LineStatusIntent for delays on the {Line} line
+LineStatusIntent for delays on the {Line} train
+LineStatusIntent for delays on the {Line}
+LineStatusIntent for track work on the {Line} line
+LineStatusIntent for track work on the {Line} train
+LineStatusIntent for track work on the {Line}
+LineStatusIntent for problems on the {Line} line
+LineStatusIntent for problems on the {Line} train
+LineStatusIntent for problems on the {Line}
+LineStatusIntent for problems with the {Line} line
+LineStatusIntent for problems with the {Line} train
+LineStatusIntent for problems with the {Line}
 LineStatusIntent how the {Line} train is doing
 LineStatusIntent how the {Line} train is running
 LineStatusIntent if the {Line} train is running
@@ -42,9 +80,17 @@ LineStatusIntent if there is any track work on the {Line}
 LineStatusIntent if there are problems on the {Line} 
 LineStatusIntent about any {Line} delays
 LineStatusIntent about any {Line} problems
-LineStatusIntent about any problems on the {Line} 
-LineStatusIntent about any problems on the {Line} 
+LineStatusIntent about any problems on the {Line}
+LineStatusIntent about any problems on the {Line}
+LineStatusIntent how the {line} looks
+LineStatusIntent how the {line} train looks
+LineStatusIntent how the {line} line looks
+LineStatusIntent how's the {line} looking
+LineStatusIntent how's the {line} train looking
+LineStatusIntent how's the {line} line looking
 CommuteStatusIntent how {Commuter} commute looks
 CommuteStatusIntent about how {Commuter} commute looks
 CommuteStatusIntent about {Commuter} commute
 CommuteStatusIntent about {Commuter} route to work
+CommuteStatusIntent are there delays on {Commuter} commute
+CommuteStatusIntent is there a delay on {Commuter} commute
