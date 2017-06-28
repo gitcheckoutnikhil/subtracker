@@ -52,8 +52,6 @@ def build_status_dict():
 				trunkDict['status'] = 'planned work. '
 		else:
 			trunkDict['status'] = 'some delays or service changes. '
-		# if trunkDict['delayIssues'] == '':
-		# 	trunkDict['delayIssues'] = 'After an earlier incident, service has resumed with some delays. '
 		alllines[trunk['name']] = trunkDict
 	alllines.pop('SIR',0)
 	return
@@ -98,9 +96,7 @@ def subway_status():
 
 	lineissues = [x for x in [line_status(line, alllines[line],False)  for line in orderedlines] if x != None]
 
-	if len(lineissues) >= 5:
-		speech_output += "Yikes! The trains are a mess today! "
-	speech_output += ' '.join(lineissues)
+	speech_output = ' '.join(lineissues)
 	if len(lineissues) < 10:
 		speech_output += " All other lines are running normally. "
 
@@ -140,7 +136,6 @@ def line_status(trunk, values, isSingle):
 			work_body = ''
 			for idx, issue in enumerate(values['workIssues']):
 				work_body += ("Alert " + str(idx+1) + ": "+ issue + ". ")
-			print work_body
 		else:
 			work_body = None
 
@@ -166,16 +161,19 @@ def line_status(trunk, values, isSingle):
 		else:
 			output_speech = status_speech
 	else:
-		output_speech = (status_speech + work_speech + delay_speech)
+		output_speech = ''
+		for part in [status_speech, work_speech, delay_speech]:
+			if part != None:
+				output_speech += part
 	return output_speech
 
 def single_line_status(intent):
 	session_attributes = {}
 	card_title = "SubTracker: line status"
-	line = intent['slots']['Line']["value"]
+	line = intent['slots']['Line']["value"][0]
 
 	for k,v in alllines.iteritems():
-		if line in k:
+		if line.upper() in k:
 			trunk = k
 		else:
 			continue
