@@ -54,6 +54,7 @@ def build_status_dict():
 			trunkDict['status'] = 'some delays or service changes. '
 		alllines[trunk['name']] = trunkDict
 	alllines.pop('SIR',0)
+	alllines['NQRW'] = alllines.pop('NQR',{'status':'normal service.'})
 	return
 
 
@@ -92,7 +93,7 @@ def subway_status():
 	reprompt_text = ''
 	should_end_session = False
 	# Add 'SIR' later for Staten Islanders
-	orderedlines = [u'123', u'456', u'7', u'ACE', u'G', u'BDFM', u'JZ', u'L', u'NQR', u'S']
+	orderedlines = [u'123', u'456', u'7', u'ACE', u'G', u'BDFM', u'JZ', u'L', u'NQRW', u'S']
 
 	lineissues = [x for x in [line_status(line, alllines[line],False)  for line in orderedlines] if x != None]
 
@@ -177,8 +178,8 @@ def single_line_status(intent):
 			trunk = k
 		else:
 			continue
-
-	speech_output = line_status(trunk, alllines[trunk],True)
+	if trunk:
+		speech_output = line_status(trunk, alllines[trunk],True)
 	reprompt_text = "Sorry, I'm not sure which line you're looking for. Please repeat your requst. "
 
 	should_end_session = False
@@ -194,17 +195,8 @@ def get_commute(intent):
 	session_attributes = {}
 	card_title = "SubTracker: my commute"
 	commuter = intent['slots']['Commuter']["value"]
-	speech_output = ''
-	reprompt_text = "I didn't quite hear you. Whose commute are you asking about? "
+	speech_output = 'This feature is coming soon.  Until then, ask about your line, or about all train service.'
 	should_end_session = False
-	if commuter == 'Nikhil':
-		orderedlines = [u'BDFM', u'NQR',]
-	else:
-		orderedlines = [u'123', u'BDFM', u'NQR']
-	lineissues = [line_status(line, alllines[line],False) for line in orderedlines]
-	speech_output += ' '.join(lineissues)
-	if len(lineissues) < (len(orderedlines)):
-		speech_output += " All other lines are running normally. "
 
 	return build_response(\
 			session_attributes,\
