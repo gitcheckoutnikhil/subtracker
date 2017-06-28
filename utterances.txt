@@ -58,6 +58,30 @@ LineStatusIntent for problems on the {Line}
 LineStatusIntent for problems with the {Line} line
 LineStatusIntent for problems with the {Line} train
 LineStatusIntent for problems with the {Line}
+LineStatusIntent are there delays on the {Line} line
+LineStatusIntent are there delays on the {Line} train
+LineStatusIntent are there delays on the {Line}
+LineStatusIntent is there track work on the {Line} line
+LineStatusIntent is there track work on the {Line} train
+LineStatusIntent is there track work on the {Line}
+LineStatusIntent are there problems on the {Line} line
+LineStatusIntent are there problems on the {Line} train
+LineStatusIntent are there problems on the {Line}
+LineStatusIntent are there problems with the {Line} line
+LineStatusIntent are there problems with the {Line} train
+LineStatusIntent are there problems with the {Line}
+LineStatusIntent are there any delays on the {Line} line
+LineStatusIntent are there any delays on the {Line} train
+LineStatusIntent are there any delays on the {Line}
+LineStatusIntent is there any track work on the {Line} line
+LineStatusIntent is there any track work on the {Line} train
+LineStatusIntent is there any track work on the {Line}
+LineStatusIntent are there any problems on the {Line} line
+LineStatusIntent are there any problems on the {Line} train
+LineStatusIntent are there any problems on the {Line}
+LineStatusIntent are there any problems with the {Line} line
+LineStatusIntent are there any problems with the {Line} train
+LineStatusIntent are there any problems with the {Line}
 LineStatusIntent how the {Line} train is doing
 LineStatusIntent how the {Line} train is running
 LineStatusIntent if the {Line} train is running
