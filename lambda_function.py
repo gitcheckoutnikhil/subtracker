@@ -12,6 +12,7 @@ status = xmltodict.parse(resp.text.encode('punycode').replace(resp.text.encode('
 
 def lambda_handler(event, context):
 
+
 	build_status_dict()
 
 	if (event["session"]["application"]["applicationId"] !=
@@ -156,16 +157,18 @@ def line_status(trunk, values, isSingle):
 		delay_speech = delay_header + delay_body
 	except:
 		delay_speech = ''
-	if isSingle == False:
+	if not isSingle:
 		if values['status'] == 'normal service.':
 			output_speech = ''
 		else:
 			output_speech = status_speech
+		output_speech += ' You can ask for the status of a specific line, or say stop to exit.'
 	else:
 		output_speech = ''
 		for part in [status_speech, work_speech, delay_speech]:
 			if part != None:
 				output_speech += part
+		output_speech += ' You can ask for the status of another line, of all lines, or say stop to exit.'
 	return output_speech
 
 def single_line_status(intent):
@@ -191,7 +194,6 @@ def single_line_status(intent):
 				))
 
 def get_commute(intent):
-	# Find out who's asking, and then do some commute calc stuff
 	session_attributes = {}
 	card_title = "SubTracker: my commute"
 	commuter = intent['slots']['Commuter']["value"]
